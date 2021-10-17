@@ -1,0 +1,48 @@
+<!-- Shortening Box -->
+<div class="row my-3">
+   <div class="col-lg-12">
+      <div class="card box px-4">
+         <div class="card-body text-clr">
+            <h4><b>Shorten URL</b></h4>
+            <!-- URL Input Form -->
+            <form [formGroup]="urlForm" (ngSubmit)="shortenURL()">
+            <div class="row">
+               <div class="col-lg-10 my-3">
+                  <div class="form-group">
+                     <div class="input-group">
+                        <div class="input-group-prepend">
+                           <span class="input-group-text input-icon"><i class="link px-2 fa fa-link fa-2x"></i> </span>
+                        </div>
+                        <input [ngClass]="{
+                           'has-error':urlForm.controls.urlLink.touched && urlForm.controls.urlLink.invalid,
+                           'has-success' : urlForm.controls.urlLink.touched && urlForm.controls.urlLink.valid
+                           }" formControlName="urlLink" type="text" class="form-control" placeholder="Shorten your URL">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-2 my-3">
+                  <button class="btn input-btn-bg w-100" type="submit">Shorten</button>
+               </div>
+               <div class="col-lg-12 box2 my-3 p-3 text-center" *ngIf="urlForm.controls.urlLink.touched && urlForm.controls.urlLink.invalid">Unable to shorten that link. It is not a valid url.</div>
+            </div>
+            </form>
+            <!-- Previous Links -->
+            <div *ngFor="let link of generatedLinks;let id=index;">
+               <div class="box2 py-2 px-3 my-3">
+                  <div class="row">
+                     <div class="col-lg-7 py-1">
+                        <span class="full-link">{{link.longURL}}</span>
+                     </div>
+                     <div class="col-lg-3 py-1">
+                        <span class="short-link">{{link.newURL}}</span>
+                     </div>
+                     <div class="col-lg-2 py-1 text-center">
+                        <button class="btn btn-sm btn-bg w-100" (click)="copyURL(id)">{{link.buttonText}}</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

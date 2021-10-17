@@ -1,0 +1,49 @@
+.box {
+	background-color: #2A2E35;
+	border-radius: 10px;
+	box-shadow: 0 0 30px #000;
+}
+
+.input-icon {
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border: 0;
+	padding-right: 2px;
+	background-color: #454E56;
+	height: 100%;
+}
+
+input,
+input:focus {
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	border: 0;
+	background-color: #454E56;
+	box-shadow: none;
+	color: white;
+}
+
+input:focus {
+	border-color: #45A29E;
+}
+
+.btn-bg {
+	background-color: #09C372;
+	color: white;
+	font-weight: bolder;
+	box-shadow: none;
+}
+
+.btn-bg:hover {
+	background-color: #09aa72;
+}
+
+.has-error {
+	box-shadow: 0 0 4px red;
+}
+
+.has-success {
+	box-shadow: 0 0 4px #09C372;
+}

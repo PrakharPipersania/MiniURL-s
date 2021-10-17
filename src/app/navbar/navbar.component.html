@@ -1,0 +1,24 @@
+<!-- Topbar -->
+<nav class="navbar navbar-default navbar-static-top navbar-expand navbar-bg">
+   <!-- Topbar Navbar -->
+   <div class="container">
+      <!-- Navbar Icon -->
+      <div class="navbar-brand">
+         <a routerLink="/"><img class="img-fluid" src="assets/img/icon.png" alt=""></a>
+      </div>
+      <!-- If User is not Logged In -->
+      <div *ngIf="!isLoggedIn" class="navbar-nav ml-auto">
+         <a routerLink="/login" class="btn btn-bg mx-2">Login</a>
+         <a routerLink="/register" class="btn btn-bg">Register</a>
+      </div>
+      <!-- If User is Logged In -->
+      <div *ngIf="isLoggedIn" class="navbar-nav ml-auto">
+         <div class="nav-item">
+            <div class="btn btn-transparent">
+               <span class="navbar-text mx-2">Prakhar Pipersania</span>
+               <img src="assets/img/profile_pic.svg" class="avatar rounded-circle" alt="">
+            </div>
+         </div>
+      </div>
+   </div>
+</nav>

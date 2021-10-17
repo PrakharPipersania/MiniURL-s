@@ -1,0 +1,53 @@
+<!-- Dashboard -->
+<div *ngIf="urlId===undefined" class="row align-items-center h-100">
+   <div class="col-lg-12">
+      <div class="text-center text-clr">
+         <div class="row">
+            <h1>Select a link to view Statistics</h1>
+         </div>
+         <div class="row my-5">
+            <img class="img-fluid" src="assets/img/dashboard.png">
+         </div>
+      </div>
+   </div>
+</div>
+<!-- URL Specific Dashboard -->
+<div *ngIf="urlId!==undefined">
+   <div class="row box p-3 mb-2 text-clr line-desp">
+      <div class="col-lg-12 my-1">Created On: <b>{{urlDetails.createdAt}}</b></div>
+      <div class="col-lg-12 my-1">
+         URL: <span class="full-link">{{urlDetails.fullURL}}</span>
+      </div>
+      <div class="row d-flex justify-content-between">
+         <div class="col-lg-8 my-1">
+            Shortened URL: <span class="short-link">{{currURL}}{{urlDetails.key}}</span>
+         </div>
+         <div class="col-lg-2 my-1">
+            <button class="btn btn-sm btn-bg w-100" (click)="copyURL(urlDetails.key)">{{buttonText}}</button>
+         </div>
+         <div class="col-lg-2 my-1">
+            <button class="btn btn-sm btn-danger w-100" (click)="deleteURL(urlDetails.id)">Delete</button>
+         </div>
+      </div>
+   </div>
+   <div class="row box p-3 mb-1 text-clr line-desp">
+      <div class="col-12">TOTAL CLICKS: <span class="click-link">{{urlDetails.totalClicks}} <i class="fa fa-hand-pointer-o"></i></span></div>
+   </div>
+   <div class="row">
+      <div class="col-lg-6 px-1 my-1 h-100">
+         <div [chart]="highChart"></div>
+      </div>
+      <div class="col-lg-6 px-1 my-1 h-100">
+         <div class="card box px-3 w-100 text-left">
+            <div class="text-center">
+               <h5 class="my-3">QR CODE</h5>
+               <img class="card-img-top" [src]="qrCodeImage" alt="QR Code for URL">
+            </div>
+            <div class="card-body">
+               <p>This scannable code is a shortcut to your link.</p>
+               <p>Place the code anywhere people can scan it with their phones: brochures, event posters, invoices ...</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

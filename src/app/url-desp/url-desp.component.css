@@ -1,0 +1,40 @@
+.line-desp {
+	border-bottom: 2px solid #454E56;
+}
+
+.full-link {
+	color: #0D6EFD;
+	font-weight: bolder;
+}
+
+.short-link {
+	color: #09C372;
+	font-weight: bolder;
+}
+
+.click-link {
+	color: #FA8142;
+	font-weight: bolder;
+}
+
+.btn-bg {
+	background-color: #09C372;
+	border: 0;
+	color: white;
+	box-shadow: none;
+}
+
+.btn-bg:hover {
+	background-color: #09aa72;
+}
+
+.box {
+	background-color: #2A2E35;
+	border-radius: 10px;
+	box-shadow: 0 0 20px #000;
+}
+
+.card-img-top {
+	width: 210px;
+	height: 210px;
+}

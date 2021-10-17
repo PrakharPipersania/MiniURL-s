@@ -1,0 +1,47 @@
+.scrollable {
+	overflow-y: scroll;
+	max-height: 575px;
+}
+
+.div-bg {
+	border-radius: 10px;
+	background-color: #2A2E35;
+	border-bottom: 2px solid #454E56;
+}
+
+.div-bg:hover {
+	border-radius: 10px;
+	background-color: #454E56;
+	border-bottom: 2px solid #2A2E35;
+}
+
+.full-link {
+	color: #0D6EFD;
+	font-weight: bolder;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 280px;
+}
+
+.url-link {
+	text-decoration: none;
+}
+
+.highlight {
+	color: #0D6EFD;
+	font-weight: bolder;
+}
+
+.btn-bg {
+	background-color: #09C372;
+	border: 0;
+	color: white;
+	font-weight: bolder;
+	box-shadow: none;
+}
+
+.btn-bg:hover {
+	background-color: #09aa72;
+}

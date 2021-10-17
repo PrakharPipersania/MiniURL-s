@@ -1,0 +1,39 @@
+.navbar-bg {
+	background-color: #2A2E35;
+	box-shadow: 0 0 10px black;
+}
+
+.navbar .navbar-brand img {
+	height: 50px;
+}
+
+.navbar-bg .navbar-brand,
+.navbar-bg .navbar-text {
+	color: #5088E9;
+}
+
+.btn-bg {
+	background-color: #09C372;
+	color: white;
+	font-weight: bolder;
+	box-shadow: none;
+}
+
+.btn-transparent {
+	background: transparent;
+}
+
+.btn-bg:hover {
+	background-color: #09aa72;
+}
+
+.btn-bg:focus,
+.btn-bg:active,
+.btn-transparent:focus,
+.btn-transparent:active {
+	box-shadow: none;
+}
+
+.avatar {
+	width: 40px;
+}
