@@ -28,15 +28,15 @@
             </form>
             <!-- Previous Links -->
             <div *ngFor="let link of generatedLinks;let id=index;">
-               <div class="box2 py-2 px-3 my-3">
+               <div class="box2 py-2 px-5 my-3">
                   <div class="row">
-                     <div class="col-lg-7 py-1">
+                     <div class="col-lg-6 p-1">
                         <span class="full-link">{{link.longURL}}</span>
                      </div>
-                     <div class="col-lg-3 py-1">
-                        <span class="short-link">{{link.newURL}}</span>
+                     <div class="col-lg-4 p-1">
+                        <a [href]="link.newURL" target="_blank"><span class="short-link">{{link.newURL}}</span></a>
                      </div>
-                     <div class="col-lg-2 py-1 text-center">
+                     <div class="col-lg-2 p-1 text-center">
                         <button class="btn btn-sm btn-bg w-100" (click)="copyURL(id)">{{link.buttonText}}</button>
                      </div>
                   </div>

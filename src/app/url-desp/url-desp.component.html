@@ -14,13 +14,13 @@
 <!-- URL Specific Dashboard -->
 <div *ngIf="urlId!==undefined">
    <div class="row box p-3 mb-2 text-clr line-desp">
-      <div class="col-lg-12 my-1">Created On: <b>{{urlDetails.createdAt}}</b></div>
+      <div class="col-lg-12 my-1">Created: <b>{{urlDetails.createdAt}}</b></div>
       <div class="col-lg-12 my-1">
-         URL: <span class="full-link">{{urlDetails.fullURL}}</span>
+         URL: <a [href]="urlDetails.fullURL" target="_blank"><span class="full-link">{{urlDetails.fullURL}}</span></a>
       </div>
       <div class="row d-flex justify-content-between">
          <div class="col-lg-8 my-1">
-            Shortened URL: <span class="short-link">{{currURL}}{{urlDetails.key}}</span>
+            Shortened URL: <a [href]="currURL+urlDetails.key" target="_blank"><span class="short-link">{{currURL}}{{urlDetails.key}}</span></a>
          </div>
          <div class="col-lg-2 my-1">
             <button class="btn btn-sm btn-bg w-100" (click)="copyURL(urlDetails.key)">{{buttonText}}</button>
